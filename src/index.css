@@ -20,3 +20,43 @@
     animation: scroll-x 30s linear infinite;
   }
 }
+
+
+
+
+
+/* marquee container: horizontally scrolls the duplicated list */
+.principles-marquee {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  /* length and duration can be tuned: larger duration = slower scroll */
+  animation: marquee 16s linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover / touch (mobile users can touch to pause) */
+.principles-marquee:hover,
+.principles-marquee:active {
+  animation-play-state: paused;
+}
+
+/* duplicate width logic: we translate left by 50% to reveal the second half */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* card minimum width for mobile marquee items */
+.principles-card {
+  min-width: 280px;  /* adjust to taste (280-320 recommended) */
+}
+
+/* optional: hide scrollbar if you have custom CSS for that */
+.principles-marquee::-webkit-scrollbar {
+  display: none;
+}

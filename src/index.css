@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 
 @theme {
     --font-montserrat: "Montserrat", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-quicksand: "Quicksand", sans-serif;
     --color-primary: #007E3F;
 }
 
@@ -20,10 +24,6 @@
     animation: scroll-x 30s linear infinite;
   }
 }
-
-
-
-
 
 /* marquee container: horizontally scrolls the duplicated list */
 .principles-marquee {
@@ -59,4 +59,17 @@
 /* optional: hide scrollbar if you have custom CSS for that */
 .principles-marquee::-webkit-scrollbar {
   display: none;
+}
+
+/* slick carousel custom dots */
+.custom-dots li button:before {
+  font-size: 8px !important;
+  color: #007E3F !important;
+  opacity: 0.4;
+  margin-top: 13em;
+}
+
+.custom-dots li.slick-active button:before {
+  opacity: 1;
+  color: #007E3F !important;
 }

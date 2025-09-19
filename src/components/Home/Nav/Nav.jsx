@@ -21,7 +21,7 @@ export default function Nav() {
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-           <img src={Logo} alt="" />
+           <img src={Logo} alt="" className="w-[50px]"/>
           </div>
 
           {/* Desktop Menu */}

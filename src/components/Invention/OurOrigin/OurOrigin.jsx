@@ -43,7 +43,7 @@ export default function OurOrigin() {
 
   return (
     <section ref={sectionRef} className="container mx-auto px-4 py-16">
-      <div className="flex">
+      <div className="md:flex">
         <div>
           <h2 className="text-4xl font-bold mb-4">Our Origin</h2>
           <p className="text-gray-600 max-w-2xl mb-8">

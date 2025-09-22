@@ -24,40 +24,47 @@ export default function Nav() {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-[95%] mx-auto ">
-        <div className="flex justify-between h-20">
+      <div className="max-w-[95%] mx-auto">
+        <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <div className="flex items-center">
             <img src={Logo} alt="ANI Logo" className="w-[50px]" />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) =>
-              link.href === "/" || link.href === "/about" ? (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
-                >
-                  {link.name}
-                </a>
-              )
-            )}
-            <a
-              href="#"
-              className="font-heading ml-4 bg-brandGreen border border-primary hover:text-white px-4 py-2 rounded-lg hover:bg-primary transition-colors"
-            >
-              Become a Member
-            </a>
+          <div className="hidden md:flex items-center justify-between w-full">
+            {/* Centered Nav Links */}
+            <div className="flex justify-center flex-grow space-x-6">
+              {navLinks.map((link) =>
+                link.href === "/" || link.href === "/about" ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
+            </div>
+
+            {/* Right-Aligned Button */}
+            <div className="ml-6">
+              <a
+                href="#"
+                className="font-heading bg-brandGreen border border-primary hover:text-white px-4 py-2 rounded-lg hover:bg-primary transition-colors"
+              >
+                Become a Member
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

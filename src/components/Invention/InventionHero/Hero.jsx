@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import { motion } from "framer-motion";
-import InventImg from "../../../assets/inventImg.jpg"; 
+import InventImg from "../../../assets/InventImg.jpg"; 
 
 const Hero = () => {
   return (

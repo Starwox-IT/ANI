@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../../assets/logo.png";
-import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -18,7 +24,7 @@ export default function Nav() {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+      <div className="max-w-[90%] mx-auto ">
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">

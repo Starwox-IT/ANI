@@ -41,7 +41,7 @@ const GetInvolved = () => {
 
   return (
     <section className="bg-white py-24 font-montserrat">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95%] mx-auto">
         {/* Section Title */}
         <h2 className="text-4xl sm:text-[2.7rem] font-bold text-[#252525] mb-16 text-center leading-tight">
           Get Involved

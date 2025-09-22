@@ -11,7 +11,7 @@ const Hero = () => {
       "
       aria-label="Hero"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="mx-auto  max-w-[95%]">
         <div className="text-center mx-auto ">
           {/* Headline */}
           <h1 className="max-w-3xl mx-auto font-montserrat font-extrabold leading-tight text-4xl sm:text-5xl lg:text-6xl">

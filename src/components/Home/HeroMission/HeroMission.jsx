@@ -47,7 +47,7 @@ const HeroMission = () => {
         <img src={HomeMissionArrow} alt="Down arrow" className=" lg:w-[70px] w-[40px]"/>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[95%] mx-auto  relative z-10">
         {/* Section Title */}
         <h2 className="text-2xl sm:text-[2.7rem] font-bold text-[#252525] mb-20 text-center leading-tight">
           Mission in Motion

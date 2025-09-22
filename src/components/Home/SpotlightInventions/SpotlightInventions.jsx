@@ -24,7 +24,7 @@ const SpotlightInventions = () => {
 
   return (
     <section className="bg-white pb-24 font-montserrat relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95%] mx-auto">
         <div className="absolute top-0 left-0 w-full h-[3px] bg-[#EFEFEF]"></div>
 
 

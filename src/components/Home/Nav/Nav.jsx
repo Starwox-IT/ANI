@@ -24,7 +24,7 @@ export default function Nav() {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
-      <div className="max-w-[90%] mx-auto ">
+      <div className="max-w-[95%] mx-auto ">
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">

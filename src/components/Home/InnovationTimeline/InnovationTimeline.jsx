@@ -5,7 +5,7 @@ import DownArrow from "../../../assets/HomeMissionArrow.png";
 const InnovationTimeline = () => {
   return (
     <section className="pb-24 font-montserrat relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[95%] mx-auto">
         {/* Downward Arrow Above Section */}
         <div className="flex justify-center mb-20">
           <img src={DownArrow} alt="Down arrow" />

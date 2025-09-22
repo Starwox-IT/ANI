@@ -13,7 +13,7 @@ const HeroImgSlide = () => {
         gradient={false}
         speed={40}
         pauseOnHover={true}
-        className="gap-6"
+        className="gap-6 mx-auto max-w-[95%]"
       >
         <img
           src={Hero1}

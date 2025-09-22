@@ -1,12 +1,13 @@
 import { useState } from "react";
-import Logo from "../../../assets/logo.png"
+import Logo from "../../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About ANI", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About ANI", href: "/about" },
     { name: "Innovations", href: "#" },
     { name: "Events & Exhibitions", href: "#" },
     { name: "Inventor Stories", href: "#" },
@@ -21,20 +22,30 @@ export default function Nav() {
         <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-           <img src={Logo} alt="" className="w-[50px]"/>
+            <img src={Logo} alt="ANI Logo" className="w-[50px]" />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors "
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href === "/" || link.href === "/about" ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="font-montserrat text-[14px] text-[#1D1D1D] hover:text-brandGreen transition-colors"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
             <a
               href="#"
               className="font-heading ml-4 bg-brandGreen border border-primary hover:text-white px-4 py-2 rounded-lg hover:bg-primary transition-colors"
@@ -81,18 +92,28 @@ export default function Nav() {
       {isOpen && (
         <div className="md:hidden bg-white shadow-md">
           <div className="px-8 pt-2 pb-8 space-y-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block text-gray-700 hover:text-brandGreen transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href === "/" || link.href === "/about" ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block text-gray-700 hover:text-brandGreen transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block text-gray-700 hover:text-brandGreen transition-colors"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
             <a
               href="#"
-              className=" bg-brandGreen border border-primary hover:text-white px-4 py-2 rounded-md  transition-colors"
+              className="bg-brandGreen border border-primary hover:text-white px-4 py-2 rounded-md transition-colors"
             >
               Become a Member
             </a>

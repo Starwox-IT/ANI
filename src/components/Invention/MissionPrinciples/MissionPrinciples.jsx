@@ -53,22 +53,22 @@ export default function MissionPrinciples() {
   };
 
   return (
-    <section ref={sectionRef} className="container mx-auto px-4 py-28">
+    <section ref={sectionRef} className="container mx-auto font-lato px-4 py-28 max-w-[95%]">
       {/* Arrow */}
       <div className="flex justify-center mb-12">
         <motion.div
           variants={arrowVariants}
           animate={inView ? "visible" : "hidden"}
-          className="text-green-600 text-8xl"
+          className="text-green-900 text-6xl font-extrabold"
         >
           <FontAwesomeIcon icon={faAngleDoubleDown} />
         </motion.div>
       </div>
 
-      <h2 className="text-3xl md:text-5xl font-bold text-center mb-6">
+      <h2 className="text-3xl md:text-5xl font-bold text-[#333333] font-lato text-center mb-6 md:mb-12">
         Our Mission and Principles
       </h2>
-      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+      <p className="text-center text-[#333333] max-w-3xl md:text-[22px] mx-auto mb-12 md:mb-20">
         Mission: ANI aims to promote and support creative ingenuity, innovation,
         and inventions among Nigerians both domestically and internationally.
       </p>
@@ -84,8 +84,8 @@ export default function MissionPrinciples() {
             animate={inView ? "visible" : "hidden"}
             custom={i}
           >
-            <h3 className="text-xl font-bold mb-3">{p.title}</h3>
-            <p className="text-gray-600 text-sm">{p.body}</p>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">{p.title}</h3>
+            <p className="text-gray-600 text-sm md:text-lg">{p.body}</p>
           </motion.div>
         ))}
       </div>
@@ -97,18 +97,19 @@ export default function MissionPrinciples() {
           spaceBetween={16}
           slidesPerView={1.1}
           autoplay={{ delay: 2500, disableOnInteraction: true }}
-          pagination={{ clickable: true }}
+          pagination={{ clickable: true, el: '.pagination'}}
           loop
         >
           {principles.map((p, i) => (
             <SwiperSlide key={i}>
-              <div className={`rounded-md p-6 ${p.bg} shadow-sm`}>
+              <div className={`rounded-md p-6 ${p.bg} shadow-sm h-[199px]`}>
                 <h3 className="text-lg font-bold mb-2">{p.title}</h3>
                 <p className="text-gray-600 text-sm">{p.body}</p>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="pagination mt-10 flex items-center justify-center" />
       </div>
     </section>
   );

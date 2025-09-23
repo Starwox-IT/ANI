@@ -1,11 +1,9 @@
-// src/components/Hero.jsx
 import { motion } from "framer-motion";
 import InventImg from "../../../assets/inventImg.jpg"; 
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-      {/* Background Image with Slow Zoom */}
       <motion.div
         className="absolute inset-0 bg-center bg-cover"
         style={{
@@ -13,15 +11,14 @@ const Hero = () => {
         }}
         initial={{ scale: 1 }}
         animate={{ scale: 1.1 }}
-        transition={{ duration: 20, ease: "easeOut" }} // slow zoom over 20s
+        transition={{ duration: 20, ease: "easeOut" }}
       >
         <div className="absolute inset-0 bg-black/50" />
       </motion.div>
 
-      {/* Content */}
       <div className="relative z-10 px-4 max-w-3xl">
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold leading-tight"
+          className="text-4xl md:text-[64px] font-extrabold leading-snug"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -30,7 +27,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="mt-4 text-base md:text-lg"
+          className="mt-4 text-base md:text-lg font-open-sans"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}

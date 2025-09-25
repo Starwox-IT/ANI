@@ -61,7 +61,7 @@ export default function JoinSection() {
   return (
     <section className="container mx-auto px-4 py-16 ">
       {/* Heading + CTA */}
-      <div className="text-center max-w-3xl mx-auto mt-24 md:mt-32">
+      <div className="text-center max-w-3xl mx-auto mt-24  md:mt-32">
         <h1 className="text-3xl md:text-7xl font-extrabold mb-6">
           Invent. Belong. Lead.
         </h1>

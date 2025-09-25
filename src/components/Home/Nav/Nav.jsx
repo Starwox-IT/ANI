@@ -13,7 +13,7 @@ export default function Nav() {
     { name: "Inventor Stories", href: "#" },
     { name: "Resources", href: "#" },
     { name: "Join ANI", href: "/join" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (

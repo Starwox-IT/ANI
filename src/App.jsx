@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Invention from "./components/Invention/Invention";
 import Nav from "./components/Home/Nav/Nav";
 import Footer from "./components/Home/Footer/Footer";
+import Innovation from "./components/Innovation/Innovation";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Invention />} />
+        <Route path="/innovations" element={<Innovation/>} />
       </Routes>
       <Footer />
     </>

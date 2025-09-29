@@ -14,7 +14,7 @@ export default function Nav() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About ANI", href: "/about" },
-    { name: "Innovations", href: "#" },
+    { name: "Innovations", href: "/innovations" },
     { name: "Events & Exhibitions", href: "#" },
     { name: "Inventor Stories", href: "#" },
     { name: "Resources", href: "#" },
@@ -36,7 +36,7 @@ export default function Nav() {
             {/* Centered Nav Links */}
             <div className="flex justify-center flex-grow space-x-6">
               {navLinks.map((link) =>
-                link.href === "/" || link.href === "/about" ? (
+                link.href === "/" || link.href === "/about" || link.href === "/innovations" ?  (
                   <Link
                     key={link.name}
                     to={link.href}

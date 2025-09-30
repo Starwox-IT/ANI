@@ -42,11 +42,11 @@ export default function OurOrigin() {
   };
 
   return (
-    <section ref={sectionRef} className="container mx-auto px-4 py-16">
-      <div className="md:flex">
-        <div>
-          <h2 className="text-4xl font-bold mb-4">Our Origin</h2>
-          <p className="text-gray-600 max-w-2xl mb-8">
+    <section ref={sectionRef} className="container mx-auto px-4 py-16 max-w-[95%]">
+      <div className="md:flex justify-between  md:my-18">
+        <div className="max-w-[500px]">
+          <h2 className="text-4xl md:text-[48px] font-bold mb-12">Our Origin</h2>
+          <p className="text-gray-600 max-w-2xl mb-8 md:text-[22px]">
             Founded to elevate local talent and reduce innovation brain drain,
             ANI has served as a platform for breakthrough thinkers and
             changemakers.
@@ -54,7 +54,7 @@ export default function OurOrigin() {
         </div>
 
         {/* Timeline */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 overflow-hidden">
           {milestones.map((m, i) => (
             <motion.div
               key={i}
@@ -62,29 +62,30 @@ export default function OurOrigin() {
               variants={milestoneVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="flex items-center space-x-4"
+              className="flex items-center space-x-4 "
             >
               <span
-                className={`text-white px-6 py-4 rounded-lg text-xl font-semibold ${m.color}`}
+                className={`text-white px-4 py-2 rounded-lg text-3xl md:h-[74px] flex items-center font-semibold ${m.color}`}
               >
                 {m.year}
               </span>
-              <p className="text-gray-700">{m.text}</p>
+              <p className="text-gray-700 font-open-sans ">{m.text}</p>
             </motion.div>
           ))}
         </div>
       </div>
 
       {/* Images */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 my-12 gap-4">
         {[hero3, hero4, hero2, kids].map((img) => (
-          <div key={img} className="relative">
+          <div key={img} className="relative ">
             <img
               src={img}
               alt="ANI Event"
               className="w-full md:h-80 object-cover rounded-lg"
             />
-            <div className="absolute bottom-2 left-2 text-white text-xs">
+            <div className="absolute inset-0 bg-black/50 rounded-lg" />
+            <div className="absolute bottom-2 left-2 text-white text-sm md:text-[20px] text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </div>
           </div>

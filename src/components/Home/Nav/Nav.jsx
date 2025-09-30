@@ -18,8 +18,8 @@ export default function Nav() {
     { name: "Events & Exhibitions", href: "#" },
     { name: "Inventor Stories", href: "#" },
     { name: "Resources", href: "#" },
-    { name: "Join ANI", href: "#" },
-    { name: "Contact Us", href: "#" },
+    { name: "Join ANI", href: "/join" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function Nav() {
             {/* Centered Nav Links */}
             <div className="flex justify-center flex-grow space-x-6">
               {navLinks.map((link) =>
-                link.href === "/" || link.href === "/about" || link.href === "/innovations" ?  (
+                link.href === "/" || link.href === "/about" || link.href === "/innovations" || link.href === "/join" ||  link.href === "/contact" ?  (
                   <Link
                     key={link.name}
                     to={link.href}

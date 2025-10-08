@@ -15,9 +15,9 @@ export default function Nav() {
     { name: "Home", href: "/" },
     { name: "About ANI", href: "/about" },
     { name: "Innovations", href: "/innovations" },
-    { name: "Events & Exhibitions", href: "#" },
-    { name: "Inventor Stories", href: "#" },
-    { name: "Resources", href: "#" },
+    // { name: "Events & Exhibitions", href: "#" },
+    // { name: "Inventor Stories", href: "#" },
+    // { name: "Resources", href: "#" },
     { name: "Join ANI", href: "/join" },
     { name: "Contact Us", href: "/contact" },
   ];
